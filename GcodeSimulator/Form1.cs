@@ -18,6 +18,7 @@ namespace GcodeSimulator
         public Form1()
         {
             InitializeComponent();
+            
 
 
         }
@@ -45,9 +46,15 @@ namespace GcodeSimulator
                     sr.Close();
 
                     //loop through all the lines in the textbox
+                    CoordinateData cd = new CoordinateData();
+
                     foreach (string line in richTextBox1.Lines)
                     {
-                        GetXCoordinate(line);
+                        GetXCoordinate(line, cd);
+                    }
+                    foreach (float xCoord in cd.XCoord)
+                    {
+                        Debug.WriteLine(xCoord);
                     }
                 }
                 catch (Exception ex)
@@ -57,10 +64,10 @@ namespace GcodeSimulator
             }
         }
 
-        static void GetXCoordinate(string line)
+        static void GetXCoordinate(string line, CoordinateData cd)
         {
             //xyz coordinate database
-            CoordinateData cd = new CoordinateData();
+            
             int xFlag = 0;
 
             //loop through each character in the line
@@ -87,22 +94,24 @@ namespace GcodeSimulator
                     }
                 }
                 //if (i == line.Length && xFlag == 0 && cd.XCoord.Count > 0)
+                if (i == line.Length-1 && xFlag == 0 && cd.XCoord.Count > 0)
+                {
+                    cd.XCoord.Add(cd.XCoord[cd.XCoord.Count - 1]);
 
-                
-            }
-            if (xFlag == 0)
-            {
-                // cd.XCoord.Add(cd.XCoord[cd.XCoord.Count - 1]);
-                Debug.WriteLine(cd.XCoord.Count);
+
+                }
 
             }
-            foreach (float xCoord in cd.XCoord)
-            {
-                Debug.WriteLine(xCoord);
-            }
+
+
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
