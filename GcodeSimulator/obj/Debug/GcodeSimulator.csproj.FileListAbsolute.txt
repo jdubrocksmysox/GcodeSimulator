@@ -7,3 +7,12 @@ c:\users\jason west\documents\visual studio 2017\Projects\GcodeSimulator\GcodeSi
 c:\users\jason west\documents\visual studio 2017\Projects\GcodeSimulator\GcodeSimulator\obj\Debug\GcodeSimulator.csproj.GenerateResource.Cache
 c:\users\jason west\documents\visual studio 2017\Projects\GcodeSimulator\GcodeSimulator\obj\Debug\GcodeSimulator.exe
 c:\users\jason west\documents\visual studio 2017\Projects\GcodeSimulator\GcodeSimulator\obj\Debug\GcodeSimulator.pdb
+C:\Users\jason\Source\Repos\GcodeSimulator\GcodeSimulator\bin\Debug\GcodeSimulator.exe.config
+C:\Users\jason\Source\Repos\GcodeSimulator\GcodeSimulator\bin\Debug\GcodeSimulator.exe
+C:\Users\jason\Source\Repos\GcodeSimulator\GcodeSimulator\bin\Debug\GcodeSimulator.pdb
+C:\Users\jason\Source\Repos\GcodeSimulator\GcodeSimulator\obj\Debug\GcodeSimulator.csprojResolveAssemblyReference.cache
+C:\Users\jason\Source\Repos\GcodeSimulator\GcodeSimulator\obj\Debug\GcodeSimulator.Form1.resources
+C:\Users\jason\Source\Repos\GcodeSimulator\GcodeSimulator\obj\Debug\GcodeSimulator.Properties.Resources.resources
+C:\Users\jason\Source\Repos\GcodeSimulator\GcodeSimulator\obj\Debug\GcodeSimulator.csproj.GenerateResource.Cache
+C:\Users\jason\Source\Repos\GcodeSimulator\GcodeSimulator\obj\Debug\GcodeSimulator.exe
+C:\Users\jason\Source\Repos\GcodeSimulator\GcodeSimulator\obj\Debug\GcodeSimulator.pdb
