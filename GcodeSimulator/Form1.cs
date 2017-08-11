@@ -10,14 +10,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Coordinates;
-
+using System.Drawing.Drawing2D;
 
 namespace GcodeSimulator
 {
     public partial class Form1 : Form
     {
         CoordinateData cd = new CoordinateData();
-        int click = 0;
+        int x = 0;
 
         public Form1()
         {
@@ -42,17 +42,17 @@ namespace GcodeSimulator
                     StreamReader sr = new StreamReader(openFileDialog1.FileName);
 
                     String text = sr.ReadToEnd();
-                    richTextBox1.Clear();
-                    richTextBox1.AppendText(text);
+                    textBox1.Clear();
+                    textBox1.AppendText(text);
                     sr.Close();
 
                     //loop through all the lines in the textbox
-                    
+
                     cd.X.Add(0);
                     cd.Y.Add(0);
                     cd.Z.Add(0);
 
-                    foreach (string line in richTextBox1.Lines)
+                    foreach (string line in textBox1.Lines)
                     {
                         GetXCoordinate(line, cd);
                     }
@@ -72,7 +72,7 @@ namespace GcodeSimulator
         static void GetXCoordinate(string line, CoordinateData cd)
         {
             //xyz coordinate database
-            
+
             int xFlag = 0;
             int yFlag = 0;
             int zFlag = 0;
@@ -160,27 +160,33 @@ namespace GcodeSimulator
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            if (click == 1)
-            {
-                
-                int centerX = panel1.Width / 2;
-                int centerY = panel1.Height / 2;
+            Graphics g = e.Graphics;
 
-                for (int i = 0; i < cd.X.Count - 1; i++)
-                {
-                    e.Graphics.DrawLine(
-                new Pen(Color.DeepSkyBlue, 2f),
-                new Point((Convert.ToInt32(cd.X[i] * 100)) + centerX, (Convert.ToInt32(cd.Y[i] * 100)) + centerY),
-                new Point((Convert.ToInt32(cd.X[i + 1] * 100)) + centerX, (Convert.ToInt32(cd.Y[i + 1] * 100)) + centerY));
-                }
-                click = 0;
+            int centerX = panel1.Width / 2 - x;
+            int centerY = panel1.Height / 2;
+
+            for (int i = 0; i < cd.X.Count - 1; i++)
+            {
+                int x1 = Convert.ToInt32(cd.X[i] * 100);
+                int y1 = Convert.ToInt32(cd.Y[i] * 100);
+                int x2 = Convert.ToInt32(cd.X[i + 1] * 100);
+                int y2 = Convert.ToInt32(cd.Y[i + 1] * 100);
+
+                g.DrawLine(
+            new Pen(Color.DeepSkyBlue, 2f),
+            new Point(x1 + centerX, y1 + centerY),
+            new Point(x2 + centerX, y2 + centerY));
             }
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            click = 1;
+            panel1.Refresh();
+        }
+
+        private void panel1_MouseClick(object sender, MouseEventArgs e)
+        {
+            x = x + 10;
             panel1.Refresh();
         }
     }
