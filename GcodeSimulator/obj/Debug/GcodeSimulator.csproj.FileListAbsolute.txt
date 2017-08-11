@@ -16,3 +16,12 @@ C:\Users\jason\Source\Repos\GcodeSimulator\GcodeSimulator\obj\Debug\GcodeSimulat
 C:\Users\jason\Source\Repos\GcodeSimulator\GcodeSimulator\obj\Debug\GcodeSimulator.csproj.GenerateResource.Cache
 C:\Users\jason\Source\Repos\GcodeSimulator\GcodeSimulator\obj\Debug\GcodeSimulator.exe
 C:\Users\jason\Source\Repos\GcodeSimulator\GcodeSimulator\obj\Debug\GcodeSimulator.pdb
+C:\Users\Jason West\Source\Repos\GcodeSimulator\GcodeSimulator\bin\Debug\GcodeSimulator.exe.config
+C:\Users\Jason West\Source\Repos\GcodeSimulator\GcodeSimulator\bin\Debug\GcodeSimulator.exe
+C:\Users\Jason West\Source\Repos\GcodeSimulator\GcodeSimulator\bin\Debug\GcodeSimulator.pdb
+C:\Users\Jason West\Source\Repos\GcodeSimulator\GcodeSimulator\obj\Debug\GcodeSimulator.csprojResolveAssemblyReference.cache
+C:\Users\Jason West\Source\Repos\GcodeSimulator\GcodeSimulator\obj\Debug\GcodeSimulator.Form1.resources
+C:\Users\Jason West\Source\Repos\GcodeSimulator\GcodeSimulator\obj\Debug\GcodeSimulator.Properties.Resources.resources
+C:\Users\Jason West\Source\Repos\GcodeSimulator\GcodeSimulator\obj\Debug\GcodeSimulator.csproj.GenerateResource.Cache
+C:\Users\Jason West\Source\Repos\GcodeSimulator\GcodeSimulator\obj\Debug\GcodeSimulator.exe
+C:\Users\Jason West\Source\Repos\GcodeSimulator\GcodeSimulator\obj\Debug\GcodeSimulator.pdb

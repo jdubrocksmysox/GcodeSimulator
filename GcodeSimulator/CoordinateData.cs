@@ -12,8 +12,8 @@ namespace Coordinates
         List<double> yCoord = new List<double>();
         List<double> zCoord = new List<double>();
 
-        public List<double> XCoord { get => xCoord; set => xCoord = value; }
-        public List<double> YCoord { get => yCoord; set => yCoord = value; }
-        public List<double> ZCoord { get => zCoord; set => zCoord = value; }
+        public List<double> X { get => xCoord; set => xCoord = value; }
+        public List<double> Y { get => yCoord; set => yCoord = value; }
+        public List<double> Z { get => zCoord; set => zCoord = value; }
     }
 }
