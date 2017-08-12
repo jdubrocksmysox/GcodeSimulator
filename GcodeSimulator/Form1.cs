@@ -18,6 +18,7 @@ namespace GcodeSimulator
     {
         CoordinateData cd = new CoordinateData();
         int x = 0;
+        double zoom = 1;
 
         public Form1()
         {
@@ -167,15 +168,15 @@ namespace GcodeSimulator
 
             for (int i = 0; i < cd.X.Count - 1; i++)
             {
-                int x1 = Convert.ToInt32(cd.X[i] * 100);
-                int y1 = Convert.ToInt32(cd.Y[i] * 100);
-                int x2 = Convert.ToInt32(cd.X[i + 1] * 100);
-                int y2 = Convert.ToInt32(cd.Y[i + 1] * 100);
+                int x1 = Convert.ToInt32((cd.X[i] * 100) * zoom);
+                int y1 = Convert.ToInt32((cd.Y[i] * 100) * zoom);
+                int x2 = Convert.ToInt32((cd.X[i + 1] * 100) * zoom);
+                int y2 = Convert.ToInt32((cd.Y[i + 1] * 100) * zoom);
 
                 g.DrawLine(
             new Pen(Color.DeepSkyBlue, 2f),
-            new Point(x1 + centerX, y1 + centerY),
-            new Point(x2 + centerX, y2 + centerY));
+            new Point(x1 + centerX, (y1 + centerY)),
+            new Point(x2 + centerX, (y2 + centerY)));
             }
         }
 
@@ -187,6 +188,18 @@ namespace GcodeSimulator
         private void panel1_MouseClick(object sender, MouseEventArgs e)
         {
             x = x + 10;
+            panel1.Refresh();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            zoom = zoom + 0.1;
+            panel1.Refresh();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            zoom = zoom - 0.1;
             panel1.Refresh();
         }
     }
